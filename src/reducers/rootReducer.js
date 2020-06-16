@@ -4,6 +4,7 @@ const initialState = {
     text: '',
     fail: {},
     loading: false,
+    visibility: false,
 }
 
 function rootReducer(state = initialState, action){
@@ -22,6 +23,16 @@ function rootReducer(state = initialState, action){
             return { 
                 ...state,
                 fail: action.payload,
+            }
+        case 'LOADING':
+            return { 
+                ...state,
+                loading: action.payload,
+            }
+        case 'VISIBILITY':
+            return { 
+                ...state,
+                visibility: action.payload,
             }
         default:
             return state;

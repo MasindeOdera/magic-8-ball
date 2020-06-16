@@ -4,59 +4,59 @@ import { useCountRenders } from './useCountRenders';
 import './Question.scss';
 
 function Question() {
-    // const state = useSelector( (state) => state);
     const [input, setInput] = useState('');
     const [question, setQuestion] = useState('');
     // eslint-disable-next-line 
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
 
     //Keeping an eye on how many times this component renders in the console.
     useCountRenders(); 
 
     const fetchAnswer = useCallback(() => {
-        setLoading(true);
         let params = encodeURIComponent(question);
+        // the cors-anywhere part handles a cors error.
         let uri = "https://cors-anywhere.herokuapp.com/https://8ball.delegator.com/magic/JSON/" + params;
         question ? console.log("A question was asked") : console.log("There has been no question asked");
         if(question) {
+            dispatch({type:"LOADING", payload: true});
             fetch(uri)
             .then(res => res.json())
             .then(data => {
-            setLoading(false);
+            dispatch({type:"LOADING", payload: false});
+            dispatch({ type: 'VISIBILITY', payload: true});
             dispatch({type:"PREDICTION", payload: data});
-            console.log({data});
             })
             .catch(error => {
                 setError(error.message);
-                setLoading(false);
+                dispatch({type:"LOADING", payload: false});
                 dispatch({type:"FAIL", payload: error.message});
             });
         }
         else {
             return;
         }
-    }, [dispatch, question, setError, setLoading]);
+    }, [dispatch, question, setError]);
   
     useEffect(() => {
         fetchAnswer();
     }, [fetchAnswer]);
 
     const handleInputChange = (e) => {
+        dispatch({ type: 'VISIBILITY', payload: false});
+        let input = e.target.value;
         setInput(e.target.value);
+        setTimeout(() => {
+            dispatch({ type: 'TEXT', payload: input});
+        }, 3000);
     };
 
     const handleClick = (e) => {
         e.preventDefault();
         setQuestion(input);
-        console.log(input);
-        setTimeout(() => {
-            dispatch({ type: 'TEXT', payload: question});
-        }, 3000);
+        dispatch({ type: 'TEXT', payload: input});
+        dispatch({ type: 'VISIBILITY', payload: true});
     };
-
-    const transition = loading ? <h1>Loading...</h1> : null;
 
     return (
         <div className="Question">
@@ -64,7 +64,6 @@ function Question() {
                 <input type="text" placeholder="Ask the Magic 8 Ball anything..." onChange={handleInputChange} />
                 <button onClick={handleClick} type="submit">Ask!</button>
             </form>
-            { transition }
         </div>
     )
 }
