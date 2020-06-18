@@ -31,13 +31,11 @@
         .Inner-circle {
             margin: auto;
             background-color: #252424;
-            border-color: #fff;
-            border-style: solid;
-            border-width: thick;
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            padding: 20px;
+            width: 120px;
+            height: 120px;
+            padding: 42px;
+            clip-path: circle(100px at center);
             .Triangle {
                 width: 0px;
                 height: 0px;
@@ -45,8 +43,8 @@
                 border-width: 0 60px 90px 60px;
                 border-color: transparent transparent #007bff transparent;
                 margin: auto;
+                clip-path: circle(100px at center);
                 animation: roll 6s infinite;
-                // transform: rotate(30deg);
                 transform: rotate(180deg);
                 -ms-transform: rotate(180deg);
                 -moz-transform: rotate(180deg);
@@ -79,4 +77,26 @@
     100% {
       transform: rotate(540deg) translate(6px, 8px);
     }
-  }
+}
+
+.Shake {
+    animation: shake 0.86s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-6px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(6px, 0, 0);
+    }
+}

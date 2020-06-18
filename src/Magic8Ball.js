@@ -34,7 +34,7 @@ function Magic8Ball() {
     console.log({state});
     return (
         <div className="Container">
-            <div className="Circle">
+            <div className={`Circle ${loading ? "Shake" : ""}`}>
                 {triangle}
                 {eight}
             </div>
