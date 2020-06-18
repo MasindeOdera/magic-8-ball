@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/magic-8-ball/static/css/main.d08f8090.chunk.css",
-    "main.js": "/magic-8-ball/static/js/main.33fc6181.chunk.js",
-    "main.js.map": "/magic-8-ball/static/js/main.33fc6181.chunk.js.map",
+    "main.css": "/magic-8-ball/static/css/main.31d259ed.chunk.css",
+    "main.js": "/magic-8-ball/static/js/main.bb7556a7.chunk.js",
+    "main.js.map": "/magic-8-ball/static/js/main.bb7556a7.chunk.js.map",
     "runtime-main.js": "/magic-8-ball/static/js/runtime-main.37698291.js",
     "runtime-main.js.map": "/magic-8-ball/static/js/runtime-main.37698291.js.map",
     "static/js/2.6e7a8a4c.chunk.js": "/magic-8-ball/static/js/2.6e7a8a4c.chunk.js",
     "static/js/2.6e7a8a4c.chunk.js.map": "/magic-8-ball/static/js/2.6e7a8a4c.chunk.js.map",
     "index.html": "/magic-8-ball/index.html",
-    "precache-manifest.208360cfbaac6da5936cf78e6551feee.js": "/magic-8-ball/precache-manifest.208360cfbaac6da5936cf78e6551feee.js",
+    "precache-manifest.617cf9e674476b7054b96bec125239c9.js": "/magic-8-ball/precache-manifest.617cf9e674476b7054b96bec125239c9.js",
     "service-worker.js": "/magic-8-ball/service-worker.js",
-    "static/css/main.d08f8090.chunk.css.map": "/magic-8-ball/static/css/main.d08f8090.chunk.css.map",
+    "static/css/main.31d259ed.chunk.css.map": "/magic-8-ball/static/css/main.31d259ed.chunk.css.map",
     "static/js/2.6e7a8a4c.chunk.js.LICENSE.txt": "/magic-8-ball/static/js/2.6e7a8a4c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.37698291.js",
     "static/js/2.6e7a8a4c.chunk.js",
-    "static/css/main.d08f8090.chunk.css",
-    "static/js/main.33fc6181.chunk.js"
+    "static/css/main.31d259ed.chunk.css",
+    "static/js/main.bb7556a7.chunk.js"
   ]
 }
