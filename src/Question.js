@@ -62,7 +62,7 @@ function Question() {
     return (
         <div className="Question">
             <form>
-                <input type="text" placeholder="Ask the Magic 8 Ball anything..." onChange={handleInputChange} />
+                <input type="text" placeholder="What would you like to know?" onChange={handleInputChange} />
                 <button onClick={handleClick} type="submit">Ask!</button>
             </form>
         </div>

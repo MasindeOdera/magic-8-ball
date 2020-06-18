@@ -45,6 +45,8 @@
                 border-width: 0 60px 90px 60px;
                 border-color: transparent transparent #007bff transparent;
                 margin: auto;
+                animation: roll 6s infinite;
+                // transform: rotate(30deg);
                 transform: rotate(180deg);
                 -ms-transform: rotate(180deg);
                 -moz-transform: rotate(180deg);
@@ -69,3 +71,12 @@
         }
     }
 }
+
+@keyframes roll {
+    0% {
+      transform: rotate(0) translate(16px, 18px);
+    }
+    100% {
+      transform: rotate(540deg) translate(6px, 8px);
+    }
+  }
