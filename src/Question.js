@@ -43,6 +43,7 @@ function Question() {
     }, [fetchAnswer]);
 
     const handleInputChange = (e) => {
+        //I want to display the number 8 unless the user clicks Ask.
         dispatch({ type: 'VISIBILITY', payload: false});
         let input = e.target.value;
         setInput(e.target.value);
