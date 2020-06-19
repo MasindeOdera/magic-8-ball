@@ -6,9 +6,9 @@
         background-color: #000;
         border-color: #000;
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        padding: 60px;
+        width: 180px;
+        height: 180px;
+        padding: 40px;
         .Eight {
             margin: auto;
             background-color: #fff;
@@ -32,10 +32,10 @@
             margin: auto;
             background-color: #252424;
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             padding: 42px;
-            clip-path: circle(100px at center);
+            clip-path: circle(80px at center);
             .Triangle {
                 width: 0px;
                 height: 0px;
@@ -50,10 +50,6 @@
                 -moz-transform: rotate(180deg);
                 -webkit-transform: rotate(180deg);
                 -o-transform: rotate(180deg);
-                // -webkit-animation: pulse 2s infinite; /* Safari 4+ */
-                // -moz-animation:    pulse 2s infinite; /* Fx 5+ */
-                // -o-animation:      pulse 2s infinite; /* Opera 12+ */
-                // animation:         pulse 5s infinite; /* IE 10+, Fx 29+ */
                 .Response {
                     font-size: 0.74em;
                     text-align: center;
@@ -103,15 +99,12 @@
     10%, 90% {
       transform: translate3d(-1px, 0, 0);
     }
-    
     20%, 80% {
       transform: translate3d(2px, 0, 0);
     }
-  
     30%, 50%, 70% {
       transform: translate3d(-6px, 0, 0);
     }
-  
     40%, 60% {
       transform: translate3d(6px, 0, 0);
     }
