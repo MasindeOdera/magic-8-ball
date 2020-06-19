@@ -6,9 +6,9 @@
         background-color: #000;
         border-color: #000;
         border-radius: 50%;
-        width: 180px;
-        height: 180px;
-        padding: 40px;
+        width: 160px;
+        height: 160px;
+        padding: 20px;
         .Eight {
             margin: auto;
             background-color: #fff;
@@ -16,26 +16,26 @@
             border-style: solid;
             border-width: thick;
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 130px;
+            height: 130px;
             .Number {
-                font-size: 8em;
+                font-size: 7em;
                 text-align: center;
                 position: relative;
-                width: 150px;
-                height: 150px;
+                width: 130px;
+                height: 130px;
                 margin: 0px;
-                transform: skew(-0.028turn, 12deg);
+                transform: skew(-0.028turn, 14deg);
             }
         }
         .Inner-circle {
             margin: auto;
             background-color: #252424;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             padding: 42px;
-            clip-path: circle(80px at center);
+            clip-path: circle(68px at center);
             .Triangle {
                 width: 0px;
                 height: 0px;
