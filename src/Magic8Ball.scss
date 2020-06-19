@@ -44,12 +44,16 @@
                 border-color: transparent transparent #007bff transparent;
                 margin: auto;
                 clip-path: circle(100px at center);
-                animation: roll 6s infinite;
+                animation: roll 6s infinite, pulse 6s infinite;
                 transform: rotate(180deg);
                 -ms-transform: rotate(180deg);
                 -moz-transform: rotate(180deg);
                 -webkit-transform: rotate(180deg);
                 -o-transform: rotate(180deg);
+                // -webkit-animation: pulse 2s infinite; /* Safari 4+ */
+                // -moz-animation:    pulse 2s infinite; /* Fx 5+ */
+                // -o-animation:      pulse 2s infinite; /* Opera 12+ */
+                // animation:         pulse 5s infinite; /* IE 10+, Fx 29+ */
                 .Response {
                     font-size: 0.74em;
                     text-align: center;
@@ -72,15 +76,27 @@
 
 @keyframes roll {
     0% {
-      transform: rotate(0) translate(16px, 18px);
+      transform: rotate(90) translate(16px, 18px);
     }
     100% {
       transform: rotate(540deg) translate(6px, 8px);
     }
 }
 
+@keyframes pulse {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+
 .Shake {
-    animation: shake 0.86s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 0.86s cubic-bezier(.36,.07,.99,.97) both;
 }
 
 @keyframes shake {

@@ -3,21 +3,13 @@ import { useSelector } from 'react-redux';
 import './Magic8Ball.scss';
 
 function Magic8Ball() {
-    const state = useSelector( (state) => state);
     const answer = useSelector( (state) => state.prediction);
     const loading = useSelector( (state) => state.loading);
     const visibility = useSelector( (state) => state.visibility);
     
-    //Will need to delete this once functionality has improved.
-    if(answer.magic) {
-        console.log("there is a question");
-    }
-    else {
-        console.log("there is no query/question");
-    }
-
+    //Using answer.magic here to control when I can use answer.
     const response = answer.magic && !loading ? answer.magic.answer : null;
-    const transition = loading ? <h1>Loading...</h1> : null;
+    const transition = loading ? <h1>Predicting...</h1> : null;
 
     const triangle = visibility ?
                         <div className="Inner-circle">
@@ -26,17 +18,15 @@ function Magic8Ball() {
                             </div>
                         </div> : null;
 
-    const eight = visibility ? null: 
-                <div className="Eight">
+    const eight = <div className="Eight">
                     <h1 className="Number">8</h1>
                 </div>;           
 
-    console.log({state});
     return (
         <div className="Container">
             <div className={`Circle ${loading ? "Shake" : ""}`}>
                 {triangle}
-                {eight}
+                {visibility ? null : eight}
             </div>
             { transition }
         </div>

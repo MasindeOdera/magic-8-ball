@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { useCountRenders } from './useCountRenders';
 import './Question.scss';
 
 function Question() {
@@ -10,14 +9,10 @@ function Question() {
     const [error, setError] = useState('');
     const dispatch = useDispatch();
 
-    //Keeping an eye on how many times this component renders in the console.
-    useCountRenders(); 
-
     const fetchAnswer = useCallback(() => {
         let params = encodeURIComponent(question);
         // the cors-anywhere part handles a cors error.
         let uri = "https://cors-anywhere.herokuapp.com/https://8ball.delegator.com/magic/JSON/" + params;
-        question ? console.log("A question was asked") : console.log("There has been no question asked");
         if(question) {
             dispatch({type:"LOADING", payload: true});
             fetch(uri)
@@ -31,6 +26,7 @@ function Question() {
                 setError(error.message);
                 dispatch({type:"LOADING", payload: false});
                 dispatch({type:"FAIL", payload: error.message});
+                console.log(error.message);
             });
         }
         else {
