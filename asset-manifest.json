@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/magic-8-ball/static/css/main.3692a64e.chunk.css",
+    "main.css": "/magic-8-ball/static/css/main.da5dc87e.chunk.css",
     "main.js": "/magic-8-ball/static/js/main.170fe367.chunk.js",
     "main.js.map": "/magic-8-ball/static/js/main.170fe367.chunk.js.map",
     "runtime-main.js": "/magic-8-ball/static/js/runtime-main.37698291.js",
@@ -8,15 +8,15 @@
     "static/js/2.6e7a8a4c.chunk.js": "/magic-8-ball/static/js/2.6e7a8a4c.chunk.js",
     "static/js/2.6e7a8a4c.chunk.js.map": "/magic-8-ball/static/js/2.6e7a8a4c.chunk.js.map",
     "index.html": "/magic-8-ball/index.html",
-    "precache-manifest.c85b64e81f134aba6d85c85a9ab01ea6.js": "/magic-8-ball/precache-manifest.c85b64e81f134aba6d85c85a9ab01ea6.js",
+    "precache-manifest.8227a5ae8e15ce53b2e68577e185a22c.js": "/magic-8-ball/precache-manifest.8227a5ae8e15ce53b2e68577e185a22c.js",
     "service-worker.js": "/magic-8-ball/service-worker.js",
-    "static/css/main.3692a64e.chunk.css.map": "/magic-8-ball/static/css/main.3692a64e.chunk.css.map",
+    "static/css/main.da5dc87e.chunk.css.map": "/magic-8-ball/static/css/main.da5dc87e.chunk.css.map",
     "static/js/2.6e7a8a4c.chunk.js.LICENSE.txt": "/magic-8-ball/static/js/2.6e7a8a4c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.37698291.js",
     "static/js/2.6e7a8a4c.chunk.js",
-    "static/css/main.3692a64e.chunk.css",
+    "static/css/main.da5dc87e.chunk.css",
     "static/js/main.170fe367.chunk.js"
   ]
 }
